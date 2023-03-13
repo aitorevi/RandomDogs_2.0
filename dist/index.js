@@ -19,6 +19,7 @@ app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const dogUrl = yield fetch(url)
         .then(res => res.json()) // Convierte a JSON las respuesta que devuelve la API en texto plano
         .then(json => json.message); // Extrae del JSON la Url
+    // res.send("https://images.dog.ceo/breeds/ridgeback-rhodesian/n02087394_381.jpg"
     res.send(JSON.stringify({ url: dogUrl }) // parsea a String el objeto JSON
     );
 }));
